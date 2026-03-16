@@ -2,7 +2,7 @@
 
 [[location]]
 type = "farp"
-name = "Bandit"
+name = "FARP Bandit"
 elevation_feet = "4290"
 
 [location.coordinates.dms]
@@ -24,7 +24,7 @@ fm = "34.10"
 
 [[location]]
 type = "farp"
-name = "Dallas"
+name = "FARP Dallas"
 callsign = "Bravo"
 elevation_feet = "8053"
 
@@ -47,7 +47,7 @@ fm = "70.60"
 
 [[location]]
 type = "farp"
-name = "Eggers"
+name = "FARP Eggers"
 elevation_feet = "3439"
 
 [location.coordinates.dms]
@@ -69,7 +69,7 @@ fm = "75.30"
 
 [[location]]
 type = "farp"
-name = "Gladius"
+name = "FARP Gladius"
 elevation_feet = "2568"
 
 [location.coordinates.dms]
@@ -91,7 +91,7 @@ fm = "74.80"
 
 [[location]]
 type = "farp"
-name = "Hawk"
+name = "FARP Hawk"
 elevation_feet = "3686"
 
 [location.coordinates.dms]
@@ -172,7 +172,7 @@ fm = "74.20"
 
 [[location]]
 type = "farp"
-name = "Hydra"
+name = "FARP Hydra"
 callsign = "Charlie"
 elevation_feet = "3735"
 
@@ -195,7 +195,7 @@ fm = "43.90"
 
 [[location]]
 type = "farp"
-name = "Nomad"
+name = "FARP Nomad"
 elevation_feet = "2740"
 
 [location.coordinates.dms]
@@ -217,7 +217,7 @@ fm = "61.80"
 
 [[location]]
 type = "farp"
-name = "Paris"
+name = "FARP Paris"
 elevation_feet = "3717"
 
 [location.coordinates.dms]
@@ -292,7 +292,7 @@ fm = "63.90"
 
 [[location]]
 type = "farp"
-name = "Rome"
+name = "FARP Rome"
 elevation_feet = "3819"
 
 [location.coordinates.dms]
