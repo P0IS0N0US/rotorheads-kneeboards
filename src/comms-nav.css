@@ -1,0 +1,269 @@
+.frequencies-reference {
+    border: 2px solid #000000;
+    display: flex;
+}
+
+.frequency {
+    flex: 1;
+    text-align: center;
+
+    & + .frequency {
+        border-left: 2px solid;
+    }
+}
+
+.frequency__name {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+}
+
+.frequency__data {
+    padding: 0.5em;
+}
+
+.frequency__band,
+.frequency__value {
+    display: block;
+}
+
+.frequency__value {
+    font-size: 24pt;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+}
+
+thead,
+tbody {
+    margin: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #EFEFEF;
+}
+
+th,
+td {
+    padding: 0.5em 0.5em;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+td {
+    border-top: 2px dotted #A9A9A9;
+}
+
+.location__name,
+.location__dms,
+.location__mgrs,
+.location-elevation__feet,
+.location-elevation__meters,
+.location-navaids__tacan,
+.location-navaids__vor,
+.location-navaids__adf,
+.location-navaids__fm,
+.location-frequencies__vhf,
+.location-frequencies__uhf,
+.location-frequencies__hf,
+.location-frequencies__fm,
+.location-runway-heading__primary,
+.location-runway-heading__secondary,
+.location-runway-name__primary,
+.location-runway-name__secondary,
+.location-runway-elevation__feet,
+.location-runway-elevation__meters,
+.location-runway-length__feet,
+.location-runway-length__meters {
+    display: block;
+}
+
+.location,
+.location-elevation,
+.location-navaids,
+.location-frequencies-secondary {
+    border-right: 2px dotted #A9A9A9;
+}
+
+.location {
+    text-align: left;
+    width: 100%;
+}
+
+.location__callsign,
+.location__icao {
+    font-size: 12pt;
+    line-height: 1.2;
+}
+
+.location__callsign {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0 0.25em;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 1lh;
+}
+
+.location__callsign--a {
+    background-color: #B22222;
+}
+
+.location__callsign--b {
+    background-color: #228B22;
+}
+
+.location__callsign--c {
+    background-color: #0000CD;
+}
+
+.location__name {
+    font-size: 14pt;
+    font-weight: 700;
+    line-height: 1.029;
+}
+
+.location__icao {
+    color: #696969;
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: baseline;
+}
+
+.location__latitude,
+.location__longitude {
+    display: inline-block;
+}
+
+.location__longitude {
+    margin-left: 0.5em;
+}
+
+.location__dms {
+    color: #0000CD;
+}
+
+.location__ddm {
+    color: #8B008B;
+}
+
+.location__mgrs {
+    color: #8B4513;
+}
+
+.location-elevation {
+    text-align: right;
+}
+
+.location-elevation__meters {
+    color: #696969;
+}
+
+.location-navaids {
+    text-align: right;
+
+    span {
+        display: flex;
+        gap: 0.25em;
+        justify-content: space-between;
+        width: 100%;
+
+        &::before {
+            color: #FFFFFF;
+            padding: 0 0.25em;
+            text-align: center;
+            width: 1lh;
+        }
+    }
+}
+
+.location-navaids__tacan {
+    color: #000000;
+
+    &::before {
+        background-color: #000000;
+        content: "T";
+    }
+}
+
+.location-navaids__vor {
+    color: #8B008B;
+
+    &::before {
+        background-color: #8B008B;
+        content: "V";
+    }
+}
+
+.location-navaids__ndb {
+    color: #8B4513;
+
+    &::before {
+        background-color: #8B4513;
+        content: "N";
+    }
+}
+
+.location-navaids__adf {
+    color: #0000CD;
+
+    &::before {
+        background-color: #0000CD;
+        content: "A";
+    }
+}
+
+.location-navaids__fm {
+    color: #228B22;
+
+    &::before {
+        background-color: #228B22;
+        content: "F";
+    }
+}
+
+.location-frequencies-primary {
+    padding-right: 0.15em;
+    text-align: left;
+}
+
+.location-frequencies__uhf {
+    color: #0000CD;
+}
+
+.location-frequencies-secondary {
+    color: #696969;
+    padding-left: 0.15em;
+    text-align: right;
+}
+
+.location-runway-name {
+    text-align: right;
+}
+
+.location-runway-heading {
+    color: #696969;
+    text-align: left;
+}
+
+.location-runway-elevation {
+    text-align: right;
+}
+
+.location-runway-elevation__meters {
+    color: #696969;
+}
+
+.location-runway-length {
+    text-align: right;
+}
+
+.location-runway-length__meters {
+    color: #696969;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ .config.title }} - Comms & Nav Reference</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="comms-nav.css">
+</head>
+<body id="top">
+    <header>
+        <h1>
+            <span class="kneeboard-title">{{ .config.title }}</span>
+            <span class="kneeboard-subtitle">Comms & Nav Reference</span>
+        </h1>
+        <div class="kneeboard-modified-date">{{ (time.Now).Format "Jan 02 2006" }}</div>
+    </header>
+    <main>
+        <section>
+            <div class="frequencies-reference">
+                {{ range .frequencies.frequency }}
+                <div class="frequency">
+                    <div class="frequency__name">{{ .name }}</div>
+                    <div class="frequency__data">
+                        <span class="frequency__band">{{ .band }}</span>
+                        <span class="frequency__value">{{ .frequency }}</span>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+        <section>
+            <table id="locations-reference">
+                <thead>
+                <tr>
+                    <th class="location">
+                        <span class="location__name">NAME <span class="location__callsign">DSG</span> <span class="location__icao">ICAO</span></span>
+                        <span class="location__dms">DMS<span class="location__ddm">/DDM</span></span>
+                        <span class="location__mgrs">MGRS</span>
+                    </th>
+                    <th class="location-elevation">
+                        <span class="location-elevation__feet">FT EL</span>
+                        <span class="location-elevation__meters">M EL</span>
+                    </th>
+                    <th class="location-navaids">
+                        <span class="location-navaids__tacan">TACAN</span>
+                        <span class="location-navaids__vor">VOR</span>
+                        <span class="location-navaids__ndb">NDB</span>
+                        <span class="location-navaids__adf">ADF</span>
+                        <span class="location-navaids__fm">FM</span>
+                    </th>
+                    <th class="location-frequencies location-frequencies-primary">
+                        <span class="location-frequencies__vhf">VHF</span>
+                        <span class="location-frequencies__uhf">UHF</span>
+                    </th>
+                    <th class="location-frequencies location-frequencies-secondary">
+                        <span class="location-frequencies__hf">HF</span>
+                        <span class="location-frequencies__fm">FM</span>
+                    </th>
+                    <th class="location-runway-name">RWY</th>
+                    <th class="location-runway-heading">HDG</th>
+                    <th class="location-runway-elevation">
+                        <span class="location-runway-elevation__feet">FT EL</span>
+                        <span class="location-runway-elevation__meters">M EL</span>
+                    </th>
+                    <th class="location-runway-length">
+                        <span class="location-runway-length__feet">FT LEN</span>
+                        <span class="location-runway-length__meters">M LEN</span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {{ range .locations.location }}
+                <tr class="location-type__{{ .type }}">
+                    <td class="location">
+                        <span class="location__name">{{ .name }}{{ if index . "callsign" }} <span class="location__callsign location__callsign--{{ .callsign | strings.Trunc 1 | strings.ToLower }}">{{ .callsign | strings.Trunc 1 }}</span>{{ end }}{{ if index . "icao" }} <span class="location__icao">{{ .icao }}</span>{{ end }}</span>
+                        <span class="location__dms"><span class="location__latitude">{{ .coordinates.dms.latitude.direction }}{{ printf "%02d" .coordinates.dms.latitude.degrees }}°{{ printf "%02d" .coordinates.dms.latitude.minutes }}′{{ printf "%02d" .coordinates.dms.latitude.seconds }}″<span class="location__ddm">/{{ printf "%.3f" (math.Div .coordinates.dms.latitude.seconds 60) | strings.TrimLeft "0" }}</span></span> <span class="location__longitude">{{ .coordinates.dms.longitude.direction }}{{ printf "%02d" .coordinates.dms.longitude.degrees }}°{{ printf "%02d" .coordinates.dms.longitude.minutes }}′{{ printf "%02d" .coordinates.dms.longitude.seconds }}″<span class="location__ddm">/{{ printf "%.3f" (math.Div .coordinates.dms.longitude.seconds 60) | strings.TrimLeft "0" }}</span></span></span>
+                        <span class="location__mgrs">{{ .coordinates.mgrs.zone_number }} {{ .coordinates.mgrs.zone_band }} {{ .coordinates.mgrs.grid }} {{ .coordinates.mgrs.easting }} {{ .coordinates.mgrs.northing }}</span>
+                    </td>
+                    <td class="location-elevation">
+                        {{ if index . "elevation_feet" }}<span class="location-elevation__feet">{{ .elevation_feet }}</span>
+                        <span class="location-elevation__meters">{{ math.Round (math.Mul 0.3048 .elevation_feet) | printf "%.0f" }}</span>{{ end }}
+                    </td>
+                    <td class="location-navaids">
+                        {{ if and (index . "navaids") (index .navaids "tacan") }}<span class="location-navaids__tacan">{{ .navaids.tacan }}</span>{{ end }}
+                        {{ if and (index . "navaids") (index .navaids "vor") }}<span class="location-navaids__vor">{{ .navaids.vor }}</span>{{ end }}
+                        {{ if and (index . "navaids") (index .navaids "ndb") }}<span class="location-navaids__ndb">{{ .navaids.ndb }}</span>{{ end }}
+                        {{ if and (index . "navaids") (index .navaids "adf") }}<span class="location-navaids__adf">{{ .navaids.adf }}</span>{{ end }}
+                        {{ if and (index . "navaids") (index .navaids "fm") }}<span class="location-navaids__fm">{{ .navaids.fm }}</span>{{ end }}
+                    </td>
+                    <td class="location-frequencies location-frequencies-primary">
+                        {{ if and (index . "frequencies") (index .frequencies "vhf") }}<span class="location-frequencies__vhf">{{ .frequencies.vhf }}</span>{{ end }}
+                        {{ if and (index . "frequencies") (index .frequencies "uhf") }}<span class="location-frequencies__uhf">{{ .frequencies.uhf }}</span>{{ end }}
+                    </td>
+                    <td class="location-frequencies location-frequencies-secondary">
+                        {{ if and (index . "frequencies") (index .frequencies "hf") }}<span class="location-frequencies__hf">{{ .frequencies.hf }}</span>{{ end }}
+                        {{ if and (index . "frequencies") (index .frequencies "fm") }}<span class="location-frequencies__fm">{{ .frequencies.fm }}</span>{{ end }}
+                    </td>
+                    <td class="location-runway-name">
+                        {{ if index . "runways" }}
+                        {{ range .runways }}
+                        <div class="location-runway">
+                            <span class="location-runway-name__primary">{{ .primary.name }}</span>
+                            <span class="location-runway-name__secondary">{{ .secondary.name }}</span>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </td>
+                    <td class="location-runway-heading">
+                        {{ if index . "runways" }}
+                        {{ range .runways }}
+                        <div class="location-runway">
+                            <span class="location-runway-heading__primary">{{ .primary.heading }}°</span>
+                            <span class="location-runway-heading__secondary">{{ .secondary.heading }}°</span>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </td>
+                    <td class="location-runway-elevation">
+                        {{ if index . "runways" }}
+                        {{ range .runways }}
+                        <div class="location-runway">
+                            <span class="location-runway-elevation__feet">{{ .elevation_feet }}</span>
+                            <span class="location-runway-elevation__meters">{{ math.Round (math.Mul 0.3048 .elevation_feet) | printf "%.0f" }}</span>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </td>
+                    <td class="location-runway-length">
+                        {{ if index . "runways" }}
+                        {{ range .runways }}
+                        <span class="location-runway-length__feet">{{ .length_feet }}</span>
+                        <span class="location-runway-length__meters">{{ math.Round (math.Mul 0.3048 .length_feet) | printf "%.0f" }}</span>
+                        {{ end }}
+                        {{ end }}
+                    </td>
+                </tr>
+                {{ end }}
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
+

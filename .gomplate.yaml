@@ -1,0 +1,10 @@
+inputDir: src/
+outputDir: build/
+
+context:
+  config:
+    url: data/config.toml
+  frequencies:
+    url: data/frequencies.toml
+  locations:
+    url: data/locations.toml

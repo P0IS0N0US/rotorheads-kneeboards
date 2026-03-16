@@ -1,0 +1,12 @@
+# Common frequencies used throughout the server
+
+[[frequency]]
+name = "General / Utility"
+frequency = "251.000"
+band = "UHF"
+
+[[frequency]]
+name = "Attack"
+frequency = "30.000"
+band = "FM"
+
