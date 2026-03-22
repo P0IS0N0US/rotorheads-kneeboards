@@ -3,6 +3,7 @@
 [[location]]
 type = "farp"
 name = "FARP Bandit"
+callsign = "Bravo"
 elevation_feet = "4290"
 
 [location.coordinates.dms]
@@ -19,51 +20,6 @@ northing = "29335"
 [location.navaids]
 adf = "490.00"
 fm = "34.10"
-
-# FARP Dallas
-
-[[location]]
-type = "farp"
-name = "FARP Dallas"
-callsign = "Bravo"
-elevation_feet = "8053"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 41, seconds = 41 }
-longitude = { direction = "E", degrees = 63, minutes = 3, seconds = 10 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "NU"
-easting = "04845"
-northing = "39211"
-
-[location.navaids]
-adf = "710.00"
-fm = "70.60"
-
-# FARP Eggers
-
-[[location]]
-type = "farp"
-name = "FARP Eggers"
-elevation_feet = "3439"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 54, seconds = 28 }
-longitude = { direction = "E", degrees = 61, minutes = 44, seconds = 59 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "LU"
-easting = "85792"
-northing = "63535"
-
-[location.navaids]
-adf = "360.00"
-fm = "75.30"
 
 # FARP Gladius
 
@@ -92,6 +48,7 @@ fm = "74.80"
 [[location]]
 type = "farp"
 name = "FARP Hawk"
+callsign = "Charlie"
 elevation_feet = "3686"
 
 [location.coordinates.dms]
@@ -213,27 +170,27 @@ northing = "98505"
 adf = "450.00"
 fm = "61.80"
 
-# FARP Paris
+# FARP Puma
 
 [[location]]
 type = "farp"
-name = "FARP Paris"
-elevation_feet = "3717"
+name = "FARP Puma"
+elevation_feet = "2623"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 49, seconds = 49 }
-longitude = { direction = "E", degrees = 62, minutes = 14, seconds = 2 }
+latitude = { direction = "N", degrees = 33, minutes = 40, seconds = 54 }
+longitude = { direction = "E", degrees = 61, minutes = 5, seconds = 37 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
-grid = "MU"
-easting = "29965"
-northing = "54491"
+grid = "LT"
+easting = "23289"
+northing = "28509"
 
 [location.navaids]
-adf = "280.00"
-fm = "44.60"
+adf = "780.00"
+fm = "42.70"
 
 # Qala i Naw
 
@@ -395,24 +352,6 @@ northing = "95492"
 [location.navaids]
 adf = "570.00"
 fm = "54.90"
-
-# FARP Specter
-
-[[location]]
-type = "farp"
-name = "FARP Specter"
-elevation_feet = "7973"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 13, seconds = 25 }
-longitude = { direction = "E", degrees = 63, minutes = 42, seconds = 37 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "NT"
-easting = "65442"
-northing = "87185"
 
 # FARP Warsaw
 
