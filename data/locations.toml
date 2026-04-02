@@ -1,25 +1,3 @@
-# FARP Condor
-
-[[location]]
-type = "farp"
-name = "FARP Condor"
-elevation_feet = "2265"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 32, minutes = 27, seconds = 29 }
-longitude = { direction = "E", degrees = 61, minutes = 19, seconds = 47 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "LR"
-easting = "43023"
-northing = "92451"
-
-[location.navaids]
-adf = "200.00"
-fm = "71.90"
-
 # FARP Gladius
 
 [[location]]
@@ -47,7 +25,6 @@ fm = "74.80"
 [[location]]
 type = "farp"
 name = "FARP Hawk"
-callsign = "Charlie"
 elevation_feet = "3686"
 
 [location.coordinates.dms]
@@ -123,6 +100,28 @@ northing = "84831"
 [location.navaids]
 adf = "1250.00"
 fm = "74.20"
+
+# FARP Moscow
+
+[[location]]
+type = "farp"
+name = "FARP Moscow"
+elevation_feet = "2316"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 32, minutes = 31, seconds = 52 }
+longitude = { direction = "E", degrees = 61, minutes = 51, seconds = 20 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "LR"
+easting = "92535"
+northing = "99894"
+
+[location.navaids]
+adf = "450.00"
+fm = "54.40"
 
 # FARP Nomad
 
@@ -333,6 +332,7 @@ fm = "54.90"
 [[location]]
 type = "farp"
 name = "FARP Warsaw"
+callsign = "Charlie"
 elevation_feet = "7662"
 
 [location.coordinates.dms]
