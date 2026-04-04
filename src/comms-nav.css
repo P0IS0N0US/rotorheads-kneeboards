@@ -40,12 +40,17 @@ table {
 }
 
 thead,
+tfoot,
 tbody {
     margin: 0;
 }
 
 tbody tr:nth-child(odd) {
     background-color: #EFEFEF;
+}
+
+tr {
+    break-inside: avoid-page;
 }
 
 th,
@@ -55,7 +60,8 @@ td {
     white-space: nowrap;
 }
 
-td {
+td,
+tfoot th {
     border-top: 2px dotted #A9A9A9;
 }
 
@@ -104,11 +110,12 @@ td {
 .location__callsign {
     background-color: #000000;
     color: #FFFFFF;
+    display: inline-block;
+    min-width: 1lh;
     padding: 0 0.25em;
     text-align: center;
     text-transform: uppercase;
     vertical-align: top;
-    width: 1lh;
 }
 
 .location__callsign--a {

@@ -2,7 +2,7 @@
 
 [[location]]
 type = "farp"
-name = "FARP Gladius"
+name = "Gladius"
 elevation_feet = "2568"
 
 [location.coordinates.dms]
@@ -26,6 +26,7 @@ fm = "74.80"
 type = "airport"
 name = "Herat"
 icao = "OAHR"
+callsign = "Alpha"
 elevation_feet = "3182"
 
 [location.coordinates.dms]
@@ -43,6 +44,8 @@ northing = "86820"
 tacan = "54X"
 vor = "116.20"
 ndb = "412.00"
+adf = "1250.00"
+fm = "74.20"
 
 [location.frequencies]
 hf = "3.750"
@@ -56,34 +59,12 @@ length_feet = "8920"
 primary = { name = "18", heading = "184" }
 secondary = { name = "36", heading = "004" }
 
-# FARP Herat
-
-[[location]]
-type = "farp"
-name = "Herat (Logistics)"
-callsign = "Alpha"
-elevation_feet = "3257"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 12, seconds = 7 }
-longitude = { direction = "E", degrees = 62, minutes = 13, seconds = 39 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "MT"
-easting = "28836"
-northing = "84831"
-
-[location.navaids]
-adf = "1250.00"
-fm = "74.20"
-
 # FARP Moscow
 
 [[location]]
 type = "farp"
-name = "FARP Moscow"
+name = "Moscow"
+callsign = "Charlie"
 elevation_feet = "2316"
 
 [location.coordinates.dms]
@@ -105,7 +86,7 @@ fm = "54.40"
 
 [[location]]
 type = "farp"
-name = "FARP Nomad"
+name = "Nomad"
 elevation_feet = "2740"
 
 [location.coordinates.dms]
@@ -125,7 +106,7 @@ fm = "61.80"
 
 [[location]]
 type = "farp"
-name = "FARP Perth"
+name = "Perth"
 callsign = "Bravo"
 elevation_feet = "3941"
 
@@ -163,6 +144,10 @@ grid = "NU"
 easting = "11365"
 northing = "72172"
 
+[location.navaids]
+adf = "230.00"
+fm = "63.90"
+
 [location.frequencies]
 hf = "4.000"
 fm = "38.900"
@@ -175,33 +160,11 @@ length_feet = "6114"
 primary = { name = "04", heading = "037" }
 secondary = { name = "22", heading = "217" }
 
-# FARP Qala i Naw
-
-[[location]]
-type = "farp"
-name = "Qala i Naw (Logistics)"
-elevation_feet = "2953"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 59, seconds = 8 }
-longitude = { direction = "E", degrees = 63, minutes = 7, seconds = 1 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "NU"
-easting = "10682"
-northing = "71460"
-
-[location.navaids]
-adf = "230.00"
-fm = "63.90"
-
 # FARP Rome
 
 [[location]]
 type = "farp"
-name = "FARP Rome"
+name = "Rome"
 elevation_feet = "3819"
 
 [location.coordinates.dms]
@@ -240,6 +203,8 @@ northing = "93992"
 
 [location.navaids]
 tacan = "48X"
+adf = "570.00"
+fm = "54.90"
 
 [location.frequencies]
 hf = "3.800"
@@ -283,34 +248,11 @@ length_feet = "687"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# FARP Shindand
-
-[[location]]
-type = "farp"
-name = "Shindand (Logistics)"
-elevation_feet = "3754"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 33, minutes = 23, seconds = 47 }
-longitude = { direction = "E", degrees = 62, minutes = 15, seconds = 25 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "MS"
-easting = "30918"
-northing = "95492"
-
-[location.navaids]
-adf = "570.00"
-fm = "54.90"
-
 # FARP Warsaw
 
 [[location]]
 type = "farp"
-name = "FARP Warsaw"
-callsign = "Charlie"
+name = "Warsaw"
 elevation_feet = "7662"
 
 [location.coordinates.dms]
@@ -332,7 +274,7 @@ fm = "53.50"
 
 [[location]]
 type = "farp"
-name = "FARP Tikrit"
+name = "Tikrit"
 elevation_feet = "2862"
 
 [location.coordinates.dms]
@@ -354,7 +296,7 @@ fm = "71.00"
 
 [[location]]
 type = "farp"
-name = "FARP Outlaw"
+name = "Outlaw"
 elevation_feet = "4226"
 
 [location.coordinates.dms]
@@ -371,3 +313,34 @@ northing = "58924"
 [location.navaids]
 adf = "360.00"
 fm = "63.70"
+
+# Farah
+
+[[location]]
+type = "airport"
+name = "Farah"
+icao = "OAFR"
+elevation_feet = "2240"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 32, minutes = 21, seconds = 17 }
+longitude = { direction = "E", degrees = 62, minutes = 10, seconds = 23 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "MR"
+easting = "22200"
+northing = "80072"
+
+[location.frequencies]
+hf = "3.975"
+vhf = "118.100"
+fm = "38.850"
+uhf = "250.300"
+
+[[location.runways]]
+elevation_feet = "2240"
+length_feet = "6990"
+primary = { name = "33", heading = "328" }
+secondary = { name = "15", heading = "148" }

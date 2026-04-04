@@ -76,7 +76,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{ range .locations.location }}
+                {{ range coll.Sort "name" .locations.location }}
                 <tr class="location-type__{{ .type }}">
                     <td class="location">
                         <span class="location__name">{{ .name }}{{ if index . "callsign" }} <span class="location__callsign location__callsign--{{ .callsign | strings.Trunc 1 | strings.ToLower }}">{{ .callsign | strings.Trunc 1 }}</span>{{ end }}{{ if index . "icao" }} <span class="location__icao">{{ .icao }}</span>{{ end }}</span>
