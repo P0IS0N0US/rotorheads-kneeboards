@@ -210,6 +210,7 @@ secondary = { name = "36", heading = "359" }
 [[location]]
 type = "farp"
 name = "Warsaw"
+callsign = "Bravo"
 elevation_feet = "7662"
 
 [location.coordinates.dms]
@@ -328,7 +329,6 @@ fm = "34.40"
 
 [[location]]
 type = "farp"
-callsign = "Bravo"
 name = "Thunder"
 elevation_feet = "4662"
 
