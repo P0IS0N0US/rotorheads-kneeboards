@@ -50,7 +50,7 @@ jobs:
       - name: Convert to PDF & PNG
         run: |
           mkdir -p build/png
-          google-chrome --no-pdf-header-footer --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
+          google-chrome --virtual-time-budget=10000 --no-pdf-header-footer --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
           pdftoppm -png build/rotorheads_comms-and-nav-reference.pdf build/png/rotorheads_comms-and-nav-reference
 
       - name: Package and Release
