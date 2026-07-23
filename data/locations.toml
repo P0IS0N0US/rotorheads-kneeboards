@@ -1,24 +1,343 @@
-# FARP Gladius
+# FARP Adama
 
 [[location]]
 type = "farp"
-name = "Gladius"
-elevation_feet = "2568"
+name = "Adama"
+elevation_feet = "2312"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 35, minutes = 3, seconds = 43 }
-longitude = { direction = "E", degrees = 63, minutes = 2, seconds = 43 }
+latitude = { direction = "N", degrees = 31, minutes = 1, seconds = 22 }
+longitude = { direction = "E", degrees = 64, minutes = 6, seconds = 41 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PQ"
+easting = "06081"
+northing = "32643"
+
+[location.navaids]
+adf = "310.00"
+fm = "45.30"
+
+# FARP Apollo
+
+[[location]]
+type = "farp"
+name = "Apollo"
+callsign = "Bravo"
+elevation_feet = "9453"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 34, minutes = 48, seconds = 13 }
+longitude = { direction = "E", degrees = 65, minutes = 38, seconds = 10 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "QU"
+easting = "41151"
+northing = "54446"
+
+[location.navaids]
+adf = "850.00"
+fm = "65.20"
+
+# Bost
+
+[[location]]
+type = "airport"
+name = "Bost"
+icao = "OABT"
+elevation_feet = "2556"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 33, seconds = 36 }
+longitude = { direction = "E", degrees = 64, minutes = 21, seconds = 54 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PQ"
+easting = "29549"
+northing = "92474"
+
+[location.navaids]
+adf = "370.00"
+fm = "42.90"
+
+[location.frequencies]
+hf = "4.050"
+fm = "39.000"
+vhf = "131.250"
+uhf = "243.000"
+
+[[location.runways]]
+elevation_feet = "2556"
+length_feet = "6300"
+primary = { name = "01", heading = "005" }
+secondary = { name = "19", heading = "185" }
+
+# Camp Bastion
+
+[[location]]
+type = "airport"
+name = "Camp Bastion"
+icao = "OAZI"
+elevation_feet = "2908"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 51, seconds = 0 }
+longitude = { direction = "E", degrees = 64, minutes = 13, seconds = 25 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PR"
+easting = "15768"
+northing = "24461"
+
+[location.navaids]
+tacan = "98X"
+ndb = "423.00"
+adf = "220.00"
+fm = "53.10"
+
+[location.frequencies]
+hf = "3.900"
+fm = "38.700"
+vhf = "123.300"
+uhf = "250.100"
+
+[[location.runways]]
+elevation_feet = "2908"
+length_feet = "10700"
+primary = { name = "01", heading = "008" }
+secondary = { name = "19", heading = "188" }
+
+# Camp Bastion Heliport
+
+[[location]]
+type = "airport"
+name = "Camp Bastion Heliport"
+elevation_feet = "2907"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 51, seconds = 19 }
+longitude = { direction = "E", degrees = 64, minutes = 12, seconds = 48 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PR"
+easting = "14789"
+northing = "25036"
+
+[location.frequencies]
+hf = "4.100"
+fm = "39.100"
+vhf = "118.200"
+uhf = "250.200"
+
+[[location.runways]]
+elevation_feet = "2907"
+length_feet = "1300"
+primary = { name = "01", heading = "008" }
+secondary = { name = "19", heading = "188" }
+
+# Chaghcharan
+
+[[location]]
+type = "airport"
+name = "Chaghcharan"
+icao = "OACC"
+elevation_feet = "7454"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 34, minutes = 31, seconds = 36 }
+longitude = { direction = "E", degrees = 65, minutes = 16, seconds = 16 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "QU"
+easting = "08448"
+northing = "22896"
+
+[location.navaids]
+adf = "820.00"
+fm = "55.30"
+
+[location.frequencies]
+hf = "3.825"
+fm = "38.550"
+vhf = "118.000"
+uhf = "250.050"
+
+[[location.runways]]
+elevation_feet = "7454"
+length_feet = "6200"
+primary = { name = "07", heading = "062" }
+secondary = { name = "25", heading = "242" }
+
+# FARP Cylon
+
+[[location]]
+type = "farp"
+name = "Cylon"
+elevation_feet = "3350"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 34, minutes = 58, seconds = 34 }
+longitude = { direction = "E", degrees = 63, minutes = 20, seconds = 30 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "NU"
-easting = "04136"
-northing = "79941"
+easting = "31193"
+northing = "70436"
 
 [location.navaids]
-adf = "810.00"
-fm = "74.80"
+adf = "630.00"
+fm = "52.80"
+
+# Dwyer
+
+[[location]]
+type = "airport"
+name = "Dwyer"
+icao = "OADY"
+elevation_feet = "2414"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 5, seconds = 31 }
+longitude = { direction = "E", degrees = 64, minutes = 4, seconds = 0 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PQ"
+easting = "01735"
+northing = "40280"
+
+[location.navaids]
+tacan = "46X"
+adf = "210.00"
+fm = "75.30"
+
+[location.frequencies]
+hf = "3.775"
+fm = "38.450"
+vhf = "121.750"
+uhf = "343.000"
+
+[[location.runways]]
+elevation_feet = "2414"
+length_feet = "7700"
+primary = { name = "05", heading = "048" }
+secondary = { name = "23", heading = "228" }
+
+# FARP Eggers
+
+[[location]]
+type = "farp"
+name = "Eggers"
+elevation_feet = "3114"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 59, seconds = 50 }
+longitude = { direction = "E", degrees = 64, minutes = 13, seconds = 1 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PR"
+easting = "14946"
+northing = "40761"
+
+[location.navaids]
+adf = "200.00"
+fm = "63.50"
+
+# Farah
+
+[[location]]
+type = "airport"
+name = "Farah"
+icao = "OAFR"
+elevation_feet = "2241"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 32, minutes = 21, seconds = 48 }
+longitude = { direction = "E", degrees = 62, minutes = 10, seconds = 3 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "MR"
+easting = "21676"
+northing = "81014"
+
+[location.navaids]
+adf = "620.00"
+fm = "63.20"
+
+[location.frequencies]
+hf = "3.975"
+fm = "38.850"
+vhf = "118.100"
+uhf = "250.300"
+
+[[location.runways]]
+elevation_feet = "2241"
+length_feet = "7100"
+primary = { name = "15", heading = "148" }
+secondary = { name = "33", heading = "328" }
+
+# FARP Goblin
+
+[[location]]
+type = "farp"
+name = "Goblin"
+elevation_feet = "4584"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 32, minutes = 37, seconds = 30 }
+longitude = { direction = "E", degrees = 65, minutes = 9, seconds = 22 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "QS"
+easting = "02273"
+northing = "11764"
+
+[location.navaids]
+adf = "270.00"
+fm = "31.50"
+
+# FARP Hawk
+
+[[location]]
+type = "farp"
+name = "Hawk"
+elevation_feet = "3666"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 31, minutes = 57, seconds = 19 }
+longitude = { direction = "E", degrees = 65, minutes = 0, seconds = 52 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "R"
+grid = "PR"
+easting = "90385"
+northing = "37264"
+
+[location.navaids]
+adf = "790.00"
+fm = "51.00"
 
 # Herat
 
@@ -26,19 +345,18 @@ fm = "74.80"
 type = "airport"
 name = "Herat"
 icao = "OAHR"
-callsign = "Alpha"
-elevation_feet = "3182"
+elevation_feet = "3297"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 13, seconds = 12 }
-longitude = { direction = "E", degrees = 62, minutes = 13, seconds = 48 }
+latitude = { direction = "N", degrees = 34, minutes = 12, seconds = 28 }
+longitude = { direction = "E", degrees = 62, minutes = 13, seconds = 41 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "MT"
-easting = "29087"
-northing = "86820"
+easting = "28885"
+northing = "85463"
 
 [location.navaids]
 tacan = "54X"
@@ -54,33 +372,45 @@ vhf = "123.350"
 uhf = "240.300"
 
 [[location.runways]]
-elevation_feet = "3182"
-length_feet = "8920"
-primary = { name = "18", heading = "184" }
-secondary = { name = "36", heading = "004" }
+elevation_feet = "3297"
+length_feet = "9600"
+primary = { name = "18", heading = "185" }
+secondary = { name = "36", heading = "005" }
 
-# FARP Moscow
+# Nimroz
 
 [[location]]
-type = "farp"
-name = "Moscow"
-callsign = "Bravo"
-elevation_feet = "2316"
+type = "airport"
+name = "Nimroz"
+icao = "OANZ"
+elevation_feet = "1585"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 32, minutes = 31, seconds = 52 }
-longitude = { direction = "E", degrees = 61, minutes = 51, seconds = 20 }
+latitude = { direction = "N", degrees = 30, minutes = 57, seconds = 49 }
+longitude = { direction = "E", degrees = 62, minutes = 3, seconds = 39 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
-zone_band = "S"
-grid = "LR"
-easting = "92535"
-northing = "99894"
+zone_band = "R"
+grid = "MQ"
+easting = "10305"
+northing = "25947"
 
 [location.navaids]
-adf = "450.00"
-fm = "54.40"
+adf = "260.00"
+fm = "34.20"
+
+[location.frequencies]
+hf = "3.850"
+fm = "38.600"
+vhf = "118.050"
+uhf = "250.000"
+
+[[location.runways]]
+elevation_feet = "1585"
+length_feet = "7800"
+primary = { name = "14", heading = "138" }
+secondary = { name = "32", heading = "318" }
 
 # Qala i Naw
 
@@ -88,18 +418,18 @@ fm = "54.40"
 type = "airport"
 name = "Qala i Naw"
 icao = "OAQN"
-elevation_feet = "2921"
+elevation_feet = "2976"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 59, seconds = 31 }
-longitude = { direction = "E", degrees = 63, minutes = 7, seconds = 28 }
+latitude = { direction = "N", degrees = 34, minutes = 59, seconds = 8 }
+longitude = { direction = "E", degrees = 63, minutes = 7, seconds = 3 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "NU"
-easting = "11365"
-northing = "72172"
+easting = "10723"
+northing = "71447"
 
 [location.navaids]
 adf = "230.00"
@@ -112,10 +442,10 @@ vhf = "118.350"
 uhf = "250.350"
 
 [[location.runways]]
-elevation_feet = "2921"
-length_feet = "6114"
-primary = { name = "04", heading = "037" }
-secondary = { name = "22", heading = "217" }
+elevation_feet = "2976"
+length_feet = "6100"
+primary = { name = "04", heading = "036" }
+secondary = { name = "22", heading = "216" }
 
 # Shindand
 
@@ -123,18 +453,18 @@ secondary = { name = "22", heading = "217" }
 type = "airport"
 name = "Shindand"
 icao = "OASD"
-elevation_feet = "3715"
+elevation_feet = "3783"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 33, minutes = 22, seconds = 58 }
-longitude = { direction = "E", degrees = 62, minutes = 15, seconds = 37 }
+latitude = { direction = "N", degrees = 33, minutes = 23, seconds = 34 }
+longitude = { direction = "E", degrees = 62, minutes = 15, seconds = 40 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "MS"
-easting = "31205"
-northing = "93992"
+easting = "31282"
+northing = "95075"
 
 [location.navaids]
 tacan = "48X"
@@ -148,8 +478,8 @@ vhf = "134.750"
 uhf = "265.650"
 
 [[location.runways]]
-elevation_feet = "3715"
-length_feet = "7032"
+elevation_feet = "3783"
+length_feet = "7500"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
@@ -158,18 +488,18 @@ secondary = { name = "36", heading = "359" }
 [[location]]
 type = "airport"
 name = "Shindand Heliport"
-elevation_feet = "3798"
+elevation_feet = "3812"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 33, minutes = 24, seconds = 24 }
-longitude = { direction = "E", degrees = 62, minutes = 16, seconds = 4 }
+latitude = { direction = "N", degrees = 33, minutes = 24, seconds = 28 }
+longitude = { direction = "E", degrees = 62, minutes = 16, seconds = 5 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "MS"
-easting = "31932"
-northing = "96636"
+easting = "31940"
+northing = "96734"
 
 [location.frequencies]
 hf = "3.925"
@@ -178,247 +508,97 @@ vhf = "121.500"
 uhf = "344.000"
 
 [[location.runways]]
-elevation_feet = "3798"
-length_feet = "687"
+elevation_feet = "3812"
+length_feet = "1200"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# Farah
+# FARP Specter
 
 [[location]]
-type = "airport"
-name = "Farah"
-icao = "OAFR"
-elevation_feet = "2240"
+type = "farp"
+name = "Specter"
+elevation_feet = "9167"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 32, minutes = 21, seconds = 17 }
-longitude = { direction = "E", degrees = 62, minutes = 10, seconds = 23 }
+latitude = { direction = "N", degrees = 34, minutes = 29, seconds = 49 }
+longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 32 }
+
+[location.coordinates.mgrs]
+zone_number = "42"
+zone_band = "S"
+grid = "TD"
+easting = "49846"
+northing = "20633"
+
+[location.navaids]
+adf = "660.00"
+fm = "62.20"
+
+# FARP Starbuck
+
+[[location]]
+type = "farp"
+name = "Starbuck"
+callsign = "Alpha"
+elevation_feet = "6942"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 35, minutes = 5, seconds = 8 }
+longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 45 }
+
+[location.coordinates.mgrs]
+zone_number = "42"
+zone_band = "S"
+grid = "TD"
+easting = "51933"
+northing = "85903"
+
+[location.navaids]
+adf = "250.00"
+fm = "61.90"
+
+# FARP Tiger
+
+[[location]]
+type = "farp"
+name = "Tiger"
+elevation_feet = "7595"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 33, minutes = 22, seconds = 41 }
+longitude = { direction = "E", degrees = 64, minutes = 59, seconds = 8 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
-grid = "MR"
-easting = "22200"
-northing = "80072"
+grid = "PS"
+easting = "84714"
+northing = "94953"
 
-[location.frequencies]
-hf = "3.975"
-vhf = "118.100"
-fm = "38.850"
-uhf = "250.300"
+[location.navaids]
+adf = "490.00"
+fm = "45.20"
 
-[[location.runways]]
-elevation_feet = "2240"
-length_feet = "6990"
-primary = { name = "33", heading = "328" }
-secondary = { name = "15", heading = "148" }
-
-# FARP Centurion
+# FARP Whirlwind
 
 [[location]]
 type = "farp"
-name = "Centurion"
-elevation_feet = "2384"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 32, minutes = 15, seconds = 4 }
-longitude = { direction = "E", degrees = 62, minutes = 15, seconds = 53 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "MR"
-easting = "30756"
-northing = "68516"
-
-[location.navaids]
-adf = "400.00"
-fm = "34.40"
-
-# FARP 30TONFUEL
-
-[[location]]
-type = "farp"
-name = "30TONFUEL"
-elevation_feet = "5338"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 20, seconds = 52 }
-longitude = { direction = "E", degrees = 64, minutes = 1, seconds = 53 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "NU"
-easting = "94868"
-northing = "01209"
-
-[location.navaids]
-adf = "560.00"
-fm = "32.10"
-
-# FARP Warlord
-
-[[location]]
-type = "farp"
-name = "Warlord"
-elevation_feet = "7465"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 33, minutes = 39, seconds = 39 }
-longitude = { direction = "E", degrees = 63, minutes = 56, seconds = 22 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "NT"
-easting = "87102"
-northing = "24961"
-
-[location.navaids]
-adf = "540.00"
-fm = "51.30"
-
-# Camp Bastion
-
-[[location]]
-type = "airport"
-name = "Camp Bastion"
-icao = "OAZI"
-elevation_feet = "2886"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 50, seconds = 8 }
-longitude = { direction = "E", degrees = 64, minutes = 13, seconds = 12 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "R"
-grid = "PR"
-easting = "15463"
-northing = "22886"
-
-[location.navaids]
-tacan = "98X"
-ndb = "423.00"
-adf = "220.00"
-fm = "53.10"
-
-[location.frequencies]
-hf = "3.900"
-fm = "38.700"
-vhf = "123.300"
-uhf = "250.100"
-
-[[location.runways]]
-elevation_feet = "2886"
-length_feet = "10647"
-primary = { name = "01", heading = "007" }
-secondary = { name = "19", heading = "187" }
-
-# Camp Bastion Heliport
-
-[[location]]
-type = "airport"
-name = "Camp Bastion Heliport"
-elevation_feet = "2901"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 51, seconds = 13 }
-longitude = { direction = "E", degrees = 64, minutes = 12, seconds = 45 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "R"
-grid = "PR"
-easting = "14713"
-northing = "24868"
-
-[location.frequencies]
-hf = "4.100"
-fm = "39.100"
-vhf = "118.200"
-uhf = "250.200"
-
-[[location.runways]]
-elevation_feet = "2901"
-length_feet = "1271"
-primary = { name = "01", heading = "007" }
-secondary = { name = "19", heading = "187" }
-
-# FARP Eggers
-
-[[location]]
-type = "farp"
-name = "Eggers"
+name = "Whirlwind"
 callsign = "Charlie"
-elevation_feet = "3115"
+elevation_feet = "7863"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 59, seconds = 49 }
-longitude = { direction = "E", degrees = 64, minutes = 12, seconds = 54 }
+latitude = { direction = "N", degrees = 34, minutes = 33, seconds = 37 }
+longitude = { direction = "E", degrees = 65, minutes = 1, seconds = 19 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
-zone_band = "R"
-grid = "PR"
-easting = "14796"
-northing = "40761"
+zone_band = "S"
+grid = "PU"
+easting = "85498"
+northing = "26152"
 
 [location.navaids]
-adf = "200.00"
-fm = "63.50"
-
-# Bost
-
-[[location]]
-type = "airport"
-name = "Bost"
-icao = "OABT"
-elevation_feet = "2546"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 33, seconds = 7 }
-longitude = { direction = "E", degrees = 64, minutes = 21, seconds = 47 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "R"
-grid = "PQ"
-easting = "29394"
-northing = "91587"
-
-[location.frequencies]
-hf = "4.050"
-vhf = "131.250"
-fm = "39.000"
-uhf = "243.000"
-
-[[location.runways]]
-elevation_feet = "2546"
-length_feet = "5758"
-primary = { name = "01", heading = "005" }
-secondary = { name = "19", heading = "185" }
-
-# FARP Hornet
-
-[[location]]
-type = "farp"
-name = "Hornet"
-elevation_feet = "1892"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 57, seconds = 15 }
-longitude = { direction = "E", degrees = 62, minutes = 4, seconds = 1 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "R"
-grid = "MR"
-easting = "11838"
-northing = "35746"
-
-[location.navaids]
-adf = "800.00"
-fm = "51.60"
+adf = "1100.00"
+fm = "73.80"
