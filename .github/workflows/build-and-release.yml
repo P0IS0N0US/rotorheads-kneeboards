@@ -50,7 +50,7 @@ jobs:
       - name: Convert to PDF & PNG
         run: |
           mkdir -p build/png
-          google-chrome --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
+          google-chrome --no-pdf-header-footer --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
           pdftoppm -png build/rotorheads_comms-and-nav-reference.pdf build/png/rotorheads_comms-and-nav-reference
 
       - name: Package and Release
@@ -59,6 +59,6 @@ jobs:
         run: |
           mkdir release
           cp build/rotorheads_comms-and-nav-reference.pdf release/rotorheads_comms-and-nav-reference.pdf
-          zip -r release/rotorheads-kneeboards_${new_tag}.zip build/rotorheads_comms-and-nav-reference.pdf build/png
+          (cd build && zip -r ../release/rotorheads-kneeboards_${new_tag}.zip rotorheads_comms-and-nav-reference.pdf png)
           gh release create "$new_tag" release/* --title "$new_tag"
           
