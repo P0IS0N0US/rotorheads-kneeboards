@@ -7,13 +7,13 @@ elevation_feet = "2312"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 31, minutes = 1, seconds = 22 }
-longitude = { direction = "E", degrees = 64, minutes = 6, seconds = 41 }
+longitude = { direction = "E", degrees = 64, minutes = 6, seconds = 37 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "R"
 grid = "PQ"
-easting = "06081"
+easting = "05981"
 northing = "32643"
 
 [location.navaids]
@@ -29,14 +29,14 @@ callsign = "Bravo"
 elevation_feet = "9453"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 48, seconds = 13 }
-longitude = { direction = "E", degrees = 65, minutes = 38, seconds = 10 }
+latitude = { direction = "N", degrees = 34, minutes = 48, seconds = 14 }
+longitude = { direction = "E", degrees = 65, minutes = 38, seconds = 6 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "QU"
-easting = "41151"
+easting = "41051"
 northing = "54446"
 
 [location.navaids]
@@ -189,13 +189,13 @@ elevation_feet = "3350"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 34, minutes = 58, seconds = 34 }
-longitude = { direction = "E", degrees = 63, minutes = 20, seconds = 30 }
+longitude = { direction = "E", degrees = 63, minutes = 20, seconds = 26 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "NU"
-easting = "31193"
+easting = "31093"
 northing = "70436"
 
 [location.navaids]
@@ -247,13 +247,13 @@ elevation_feet = "3114"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 31, minutes = 59, seconds = 50 }
-longitude = { direction = "E", degrees = 64, minutes = 13, seconds = 1 }
+longitude = { direction = "E", degrees = 64, minutes = 12, seconds = 57 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "R"
 grid = "PR"
-easting = "14946"
+easting = "14846"
 northing = "40761"
 
 [location.navaids]
@@ -304,13 +304,13 @@ elevation_feet = "4584"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 32, minutes = 37, seconds = 30 }
-longitude = { direction = "E", degrees = 65, minutes = 9, seconds = 22 }
+longitude = { direction = "E", degrees = 65, minutes = 9, seconds = 18 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "QS"
-easting = "02273"
+easting = "02173"
 northing = "11764"
 
 [location.navaids]
@@ -325,14 +325,14 @@ name = "Hawk"
 elevation_feet = "3666"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 31, minutes = 57, seconds = 19 }
-longitude = { direction = "E", degrees = 65, minutes = 0, seconds = 52 }
+latitude = { direction = "N", degrees = 31, minutes = 57, seconds = 20 }
+longitude = { direction = "E", degrees = 65, minutes = 0, seconds = 48 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "R"
 grid = "PR"
-easting = "90385"
+easting = "90285"
 northing = "37264"
 
 [location.navaids]
@@ -513,28 +513,6 @@ length_feet = "1200"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# FARP Specter
-
-[[location]]
-type = "farp"
-name = "Specter"
-elevation_feet = "9167"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 29, seconds = 49 }
-longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 32 }
-
-[location.coordinates.mgrs]
-zone_number = "42"
-zone_band = "S"
-grid = "TD"
-easting = "49846"
-northing = "20633"
-
-[location.navaids]
-adf = "660.00"
-fm = "62.20"
-
 # FARP Starbuck
 
 [[location]]
@@ -545,14 +523,14 @@ elevation_feet = "6942"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 35, minutes = 5, seconds = 8 }
-longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 45 }
+longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 41 }
 
 [location.coordinates.mgrs]
 zone_number = "42"
 zone_band = "S"
 grid = "TD"
-easting = "51933"
-northing = "85903"
+easting = "51833"
+northing = "85909"
 
 [location.navaids]
 adf = "250.00"
@@ -567,18 +545,40 @@ elevation_feet = "7595"
 
 [location.coordinates.dms]
 latitude = { direction = "N", degrees = 33, minutes = 22, seconds = 41 }
-longitude = { direction = "E", degrees = 64, minutes = 59, seconds = 8 }
+longitude = { direction = "E", degrees = 64, minutes = 59, seconds = 5 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "PS"
-easting = "84714"
+easting = "84614"
 northing = "94953"
 
 [location.navaids]
 adf = "490.00"
 fm = "45.20"
+
+# FARP Vintokryl
+
+[[location]]
+type = "farp"
+name = "Vintokryl"
+elevation_feet = "9101"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 35, minutes = 19, seconds = 23 }
+longitude = { direction = "E", degrees = 66, minutes = 1, seconds = 34 }
+
+[location.coordinates.mgrs]
+zone_number = "42"
+zone_band = "S"
+grid = "TE"
+easting = "29655"
+northing = "12930"
+
+[location.navaids]
+adf = "1150.00"
+fm = "62.00"
 
 # FARP Whirlwind
 
@@ -589,14 +589,14 @@ callsign = "Charlie"
 elevation_feet = "7863"
 
 [location.coordinates.dms]
-latitude = { direction = "N", degrees = 34, minutes = 33, seconds = 37 }
-longitude = { direction = "E", degrees = 65, minutes = 1, seconds = 19 }
+latitude = { direction = "N", degrees = 34, minutes = 33, seconds = 38 }
+longitude = { direction = "E", degrees = 65, minutes = 1, seconds = 15 }
 
 [location.coordinates.mgrs]
 zone_number = "41"
 zone_band = "S"
 grid = "PU"
-easting = "85498"
+easting = "85398"
 northing = "26152"
 
 [location.navaids]
