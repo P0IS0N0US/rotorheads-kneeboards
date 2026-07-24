@@ -1,18 +1,32 @@
+@page {
+    size: Letter; /* Or A4 */
+    margin: 0.25in;
+}
+
 :root {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-size: 12pt;
     font-style: normal;
     font-variant-numeric: tabular-nums;
-    font-variation-settings: "wdth" 87.5;
+    font-stretch: 87.5%;
     font-weight: 500;
     letter-spacing: 0.5px;
     line-height: 1.2;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 body {
     margin: 0 auto;
     width: 8.5in;
+}
+
+@media print {
+    body {
+        margin: 0;
+        width: auto;
+    }
 }
 
 header {

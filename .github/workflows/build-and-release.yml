@@ -1,0 +1,64 @@
+name: Build and Release
+
+on:
+  push:
+    branches: main
+    paths:
+      - 'data/**'
+      - 'src/**'
+  workflow_dispatch: 
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # For tag and release
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Get Version
+        run: |
+          latest=$(git tag --sort=-v:refname | head -n 1)
+          version=${latest#v}
+          IFS='.' read -r first second third <<< "$version"
+          new_tag="v${first}.$((second+1)).0"
+          echo "new_tag=$new_tag" >> "$GITHUB_ENV"
+
+      - name: Install gomplate
+        run: |
+          curl -o gomplate_linux-amd64 -sSL https://github.com/hairyhenderson/gomplate/releases/download/v5.2.0/gomplate_linux-amd64
+          curl -o checksums.txt -sSL https://github.com/hairyhenderson/gomplate/releases/download/v5.2.0/checksums-v5.2.0_sha256.txt
+          expected=$(grep 'gomplate_linux-amd64$' checksums.txt | awk '{print $1}')
+          actual=$(sha256sum gomplate_linux-amd64 | awk '{print $1}')
+          if [[ "$expected" != "$actual" ]]; then
+            echo "Expected Checksum: $expected, got $actual instead"
+            exit 1
+          fi
+          chmod +x gomplate_linux-amd64
+          sudo mv gomplate_linux-amd64 /usr/local/bin/gomplate
+
+      - name: Install pdftoppm
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Build HTML
+        run: |
+          gomplate
+
+      - name: Convert to PDF & PNG
+        run: |
+          mkdir -p build/png
+          google-chrome --virtual-time-budget=10000 --no-pdf-header-footer --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
+          pdftoppm -png build/rotorheads_comms-and-nav-reference.pdf build/png/rotorheads_comms-and-nav-reference
+
+      - name: Package and Release
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir release
+          cp build/rotorheads_comms-and-nav-reference.pdf release/rotorheads_comms-and-nav-reference.pdf
+          (cd build && zip -r ../release/rotorheads-kneeboards_${new_tag}.zip rotorheads_comms-and-nav-reference.pdf png)
+          gh release create "$new_tag" release/* --title "$new_tag"
+          
