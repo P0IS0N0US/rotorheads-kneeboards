@@ -447,6 +447,29 @@ length_feet = "6100"
 primary = { name = "04", heading = "036" }
 secondary = { name = "22", heading = "216" }
 
+# FARP Shields
+
+[[location]]
+type = "farp"
+name = "Shields"
+callsign = "Charlie"
+elevation_feet = "3289"
+
+[location.coordinates.dms]
+latitude = { direction = "N", degrees = 35, minutes = 13, seconds = 28 }
+longitude = { direction = "E", degrees = 63, minutes = 43, seconds = 29 }
+
+[location.coordinates.mgrs]
+zone_number = "41"
+zone_band = "S"
+grid = "NU"
+easting = "65957"
+northing = "98187"
+
+[location.navaids]
+adf = "500.00"
+fm = "53.80"
+
 # Shindand
 
 [[location]]
@@ -513,56 +536,12 @@ length_feet = "1200"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# FARP Starbuck
-
-[[location]]
-type = "farp"
-name = "Starbuck"
-callsign = "Alpha"
-elevation_feet = "6942"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 35, minutes = 5, seconds = 8 }
-longitude = { direction = "E", degrees = 66, minutes = 16, seconds = 41 }
-
-[location.coordinates.mgrs]
-zone_number = "42"
-zone_band = "S"
-grid = "TD"
-easting = "51833"
-northing = "85909"
-
-[location.navaids]
-adf = "250.00"
-fm = "61.90"
-
-# FARP Tiger
-
-[[location]]
-type = "farp"
-name = "Tiger"
-elevation_feet = "7595"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 33, minutes = 22, seconds = 41 }
-longitude = { direction = "E", degrees = 64, minutes = 59, seconds = 5 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "PS"
-easting = "84614"
-northing = "94953"
-
-[location.navaids]
-adf = "490.00"
-fm = "45.20"
-
 # FARP Vintokryl
 
 [[location]]
 type = "farp"
 name = "Vintokryl"
+callsign = "Alpha"
 elevation_feet = "9101"
 
 [location.coordinates.dms]
@@ -585,7 +564,6 @@ fm = "62.00"
 [[location]]
 type = "farp"
 name = "Whirlwind"
-callsign = "Charlie"
 elevation_feet = "7863"
 
 [location.coordinates.dms]
