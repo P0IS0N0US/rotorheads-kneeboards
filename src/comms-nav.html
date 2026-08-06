@@ -40,7 +40,7 @@
                 <thead>
                 <tr>
                     <th class="location">
-                        <span class="location__name">NAME <span class="location__callsign">DSG</span> <span class="location__icao">ICAO</span></span>
+                        <span class="location__name">NAME <span class="location__callsign">DSG</span> <span class="location__identifier">IDENT</span></span>
                         <span class="location__dms">DMS<span class="location__ddm">/DDM</span></span>
                         <span class="location__mgrs">MGRS</span>
                     </th>
@@ -79,7 +79,7 @@
                 {{ range coll.Sort "name" .locations.location }}
                 <tr class="location-type__{{ .type }}">
                     <td class="location">
-                        <span class="location__name">{{ .name }}{{ if index . "callsign" }} <span class="location__callsign location__callsign--{{ .callsign | strings.Trunc 1 | strings.ToLower }}">{{ .callsign | strings.Trunc 1 }}</span>{{ end }}{{ if index . "icao" }} <span class="location__icao">{{ .icao }}</span>{{ end }}</span>
+                        {{ $identifier := "" }}{{ if index . "icao" }}{{ $identifier = .icao }}{{ else if index . "shortname" }}{{ if ne .shortname (.name | strings.ToUpper) }}{{ $identifier = .shortname }}{{ end }}{{ end }}<span class="location__name">{{ .name }}{{ if index . "callsign" }} <span class="location__callsign location__callsign--{{ .callsign | strings.Trunc 1 | strings.ToLower }}">{{ .callsign | strings.Trunc 1 }}</span>{{ end }}{{ if $identifier }} <span class="location__identifier">{{ $identifier }}</span>{{ end }}</span>
                         <span class="location__dms"><span class="location__latitude">{{ .coordinates.dms.latitude.direction }}{{ printf "%02d" .coordinates.dms.latitude.degrees }}°{{ printf "%02d" .coordinates.dms.latitude.minutes }}′{{ printf "%02d" .coordinates.dms.latitude.seconds }}″<span class="location__ddm">/{{ printf "%.3f" (math.Div .coordinates.dms.latitude.seconds 60) | strings.TrimLeft "0" }}</span></span> <span class="location__longitude">{{ .coordinates.dms.longitude.direction }}{{ printf "%02d" .coordinates.dms.longitude.degrees }}°{{ printf "%02d" .coordinates.dms.longitude.minutes }}′{{ printf "%02d" .coordinates.dms.longitude.seconds }}″<span class="location__ddm">/{{ printf "%.3f" (math.Div .coordinates.dms.longitude.seconds 60) | strings.TrimLeft "0" }}</span></span></span>
                         <span class="location__mgrs">{{ .coordinates.mgrs.zone_number }} {{ .coordinates.mgrs.zone_band }} {{ .coordinates.mgrs.grid }} {{ .coordinates.mgrs.easting }} {{ .coordinates.mgrs.northing }}</span>
                     </td>
@@ -135,8 +135,10 @@
                     <td class="location-runway-length">
                         {{ if index . "runways" }}
                         {{ range .runways }}
-                        <span class="location-runway-length__feet">{{ .length_feet }}</span>
-                        <span class="location-runway-length__meters">{{ math.Round (math.Mul 0.3048 .length_feet) | printf "%.0f" }}</span>
+                        <div class="location-runway">
+                            <span class="location-runway-length__feet">{{ .length_feet }}</span>
+                            <span class="location-runway-length__meters">{{ math.Round (math.Mul 0.3048 .length_feet) | printf "%.0f" }}</span>
+                        </div>
                         {{ end }}
                         {{ end }}
                     </td>

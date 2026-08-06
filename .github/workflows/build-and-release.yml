@@ -6,59 +6,122 @@ on:
     paths:
       - 'data/**'
       - 'src/**'
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Which part of the version to increase'
+        type: choice
+        options: [minor, patch, major]
+        default: minor
+
+permissions:
+  contents: write # For tag and release
+
+# Two pushes in quick succession would otherwise race for the same tag.
+concurrency:
+  group: build-and-release
+  cancel-in-progress: false
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # For tag and release
     steps:
       - name: Checkout repo
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - name: Get Version
+      - name: Work out the version
         run: |
-          latest=$(git tag --sort=-v:refname | head -n 1)
-          version=${latest#v}
-          IFS='.' read -r first second third <<< "$version"
-          new_tag="v${first}.$((second+1)).0"
-          echo "new_tag=$new_tag" >> "$GITHUB_ENV"
-
-      - name: Install gomplate
-        run: |
-          curl -o gomplate_linux-amd64 -sSL https://github.com/hairyhenderson/gomplate/releases/download/v5.2.0/gomplate_linux-amd64
-          curl -o checksums.txt -sSL https://github.com/hairyhenderson/gomplate/releases/download/v5.2.0/checksums-v5.2.0_sha256.txt
-          expected=$(grep 'gomplate_linux-amd64$' checksums.txt | awk '{print $1}')
-          actual=$(sha256sum gomplate_linux-amd64 | awk '{print $1}')
-          if [[ "$expected" != "$actual" ]]; then
-            echo "Expected Checksum: $expected, got $actual instead"
+          # --list 'v*' so a stray non-version tag cannot win the sort, and a
+          # default of v0.0.0 so the very first release does not produce "v.1.0".
+          previous=$(git tag --list 'v*' --sort=-v:refname | head -n 1)
+          previous=${previous:-v0.0.0}
+          if [[ ! "${previous}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Latest tag ${previous} is not a version number"
             exit 1
           fi
-          chmod +x gomplate_linux-amd64
-          sudo mv gomplate_linux-amd64 /usr/local/bin/gomplate
+
+          IFS='.' read -r major minor patch <<< "${previous#v}"
+          case "${{ inputs.bump || 'minor' }}" in
+            major) new_tag="v$((major+1)).0.0" ;;
+            patch) new_tag="v${major}.${minor}.$((patch+1))" ;;
+            *)     new_tag="v${major}.$((minor+1)).0" ;;
+          esac
+
+          {
+            echo "previous_tag=${previous}"
+            echo "new_tag=${new_tag}"
+          } >> "$GITHUB_ENV"
+          echo "Releasing ${new_tag} (previous ${previous})"
+
+      - name: Set up tools
+        # Python and gomplate come from mise.toml, at the versions pinned there.
+        # aqua verifies release checksums, so there is no manual sha256 step.
+        uses: jdx/mise-action@v2
 
       - name: Install pdftoppm
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
       - name: Build HTML
         run: |
-          gomplate
+          mise exec -- gomplate
+          # An empty or missing page means a template or data problem; fail here
+          # rather than publishing a blank kneeboard.
+          if [[ ! -s build/comms-nav.html ]]; then
+            echo "build/comms-nav.html is missing or empty"
+            exit 1
+          fi
 
-      - name: Convert to PDF & PNG
+      - name: Convert to PDF and PNG
         run: |
+          if ! command -v google-chrome >/dev/null 2>&1; then
+            echo "google-chrome is not on this runner image"
+            exit 1
+          fi
           mkdir -p build/png
-          google-chrome --virtual-time-budget=10000 --no-pdf-header-footer --headless --disable-gpu --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf build/comms-nav.html
+          # --virtual-time-budget: wait for the webfont to load before printing
+          # --no-sandbox, --disable-dev-shm-usage: required in a container
+          google-chrome \
+            --headless=new \
+            --disable-gpu \
+            --no-sandbox \
+            --disable-dev-shm-usage \
+            --virtual-time-budget=10000 \
+            --no-pdf-header-footer \
+            --print-to-pdf=build/rotorheads_comms-and-nav-reference.pdf \
+            build/comms-nav.html
           pdftoppm -png build/rotorheads_comms-and-nav-reference.pdf build/png/rotorheads_comms-and-nav-reference
+          if [[ ! -s build/rotorheads_comms-and-nav-reference.pdf ]]; then
+            echo "PDF was not produced"
+            exit 1
+          fi
+
+      - name: Write release notes
+        run: |
+          # The interesting part of a release is which FARPs changed, so diff the
+          # data itself. Commit subjects go in as supporting detail.
+          if git rev-parse -q --verify "refs/tags/${previous_tag}" >/dev/null; then
+            git show "${previous_tag}:data/locations.toml" > /tmp/previous-locations.toml 2>/dev/null || true
+            git log --no-merges --pretty=format:'%s' "${previous_tag}..HEAD" > /tmp/commits.txt
+          else
+            : > /tmp/commits.txt
+          fi
+
+          notes_args=(--current data/locations.toml --commits /tmp/commits.txt --output /tmp/notes.md)
+          if [[ -s /tmp/previous-locations.toml ]]; then
+            notes_args+=(--previous /tmp/previous-locations.toml --previous-tag "${previous_tag}")
+          fi
+          mise exec -- ./scripts/release_notes.py "${notes_args[@]}"
+          cat /tmp/notes.md
 
       - name: Package and Release
-        env: 
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir release
           cp build/rotorheads_comms-and-nav-reference.pdf release/rotorheads_comms-and-nav-reference.pdf
           (cd build && zip -r ../release/rotorheads-kneeboards_${new_tag}.zip rotorheads_comms-and-nav-reference.pdf png)
-          gh release create "$new_tag" release/* --title "$new_tag"
-          
+          gh release create "$new_tag" release/* \
+            --title "$new_tag - $(date -u '+%-d %B %Y')" \
+            --notes-file /tmp/notes.md

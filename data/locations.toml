@@ -1,8 +1,9 @@
-# FARP Adama
+# FARP ADAMA
 
 [[location]]
 type = "farp"
-name = "Adama"
+name = "ADAMA"
+shortname = "ADAMA"
 elevation_feet = "2312"
 
 [location.coordinates.dms]
@@ -20,11 +21,12 @@ northing = "32643"
 adf = "310.00"
 fm = "45.30"
 
-# FARP Apollo
+# FARP APOLLO
 
 [[location]]
 type = "farp"
-name = "Apollo"
+name = "APOLLO"
+shortname = "APOLLO"
 callsign = "Bravo"
 elevation_feet = "9453"
 
@@ -43,11 +45,11 @@ northing = "54446"
 adf = "850.00"
 fm = "65.20"
 
-# Bost
+# BOST
 
 [[location]]
 type = "airport"
-name = "Bost"
+name = "BOST"
 icao = "OABT"
 elevation_feet = "2556"
 
@@ -78,11 +80,11 @@ length_feet = "6300"
 primary = { name = "01", heading = "005" }
 secondary = { name = "19", heading = "185" }
 
-# Camp Bastion
+# CAMP BASTION
 
 [[location]]
 type = "airport"
-name = "Camp Bastion"
+name = "CAMP BASTION"
 icao = "OAZI"
 elevation_feet = "2908"
 
@@ -115,11 +117,11 @@ length_feet = "10700"
 primary = { name = "01", heading = "008" }
 secondary = { name = "19", heading = "188" }
 
-# Camp Bastion Heliport
+# CAMP BASTION HELIPORT
 
 [[location]]
 type = "airport"
-name = "Camp Bastion Heliport"
+name = "CAMP BASTION HELIPORT"
 elevation_feet = "2907"
 
 [location.coordinates.dms]
@@ -145,11 +147,11 @@ length_feet = "1300"
 primary = { name = "01", heading = "008" }
 secondary = { name = "19", heading = "188" }
 
-# Chaghcharan
+# CHAGHCHARAN
 
 [[location]]
 type = "airport"
-name = "Chaghcharan"
+name = "CHAGHCHARAN"
 icao = "OACC"
 elevation_feet = "7454"
 
@@ -180,11 +182,12 @@ length_feet = "6200"
 primary = { name = "07", heading = "062" }
 secondary = { name = "25", heading = "242" }
 
-# FARP Cylon
+# FARP CYLON
 
 [[location]]
 type = "farp"
-name = "Cylon"
+name = "CYLON"
+shortname = "CYLON"
 elevation_feet = "3350"
 
 [location.coordinates.dms]
@@ -202,11 +205,11 @@ northing = "70436"
 adf = "630.00"
 fm = "52.80"
 
-# Dwyer
+# DWYER
 
 [[location]]
 type = "airport"
-name = "Dwyer"
+name = "DWYER"
 icao = "OADY"
 elevation_feet = "2414"
 
@@ -238,11 +241,12 @@ length_feet = "7700"
 primary = { name = "05", heading = "048" }
 secondary = { name = "23", heading = "228" }
 
-# FARP Eggers
+# FARP EGGERS
 
 [[location]]
 type = "farp"
-name = "Eggers"
+name = "EGGERS"
+shortname = "EGGERS"
 elevation_feet = "3114"
 
 [location.coordinates.dms]
@@ -260,11 +264,11 @@ northing = "40761"
 adf = "200.00"
 fm = "63.50"
 
-# Farah
+# FARAH
 
 [[location]]
 type = "airport"
-name = "Farah"
+name = "FARAH"
 icao = "OAFR"
 elevation_feet = "2241"
 
@@ -295,33 +299,12 @@ length_feet = "7100"
 primary = { name = "15", heading = "148" }
 secondary = { name = "33", heading = "328" }
 
-# FARP Goblin
+# FARP HAWK
 
 [[location]]
 type = "farp"
-name = "Goblin"
-elevation_feet = "4584"
-
-[location.coordinates.dms]
-latitude = { direction = "N", degrees = 32, minutes = 37, seconds = 30 }
-longitude = { direction = "E", degrees = 65, minutes = 9, seconds = 18 }
-
-[location.coordinates.mgrs]
-zone_number = "41"
-zone_band = "S"
-grid = "QS"
-easting = "02173"
-northing = "11764"
-
-[location.navaids]
-adf = "270.00"
-fm = "31.50"
-
-# FARP Hawk
-
-[[location]]
-type = "farp"
-name = "Hawk"
+name = "HAWK"
+shortname = "HAWK"
 elevation_feet = "3666"
 
 [location.coordinates.dms]
@@ -339,11 +322,11 @@ northing = "37264"
 adf = "790.00"
 fm = "51.00"
 
-# Herat
+# HERAT
 
 [[location]]
 type = "airport"
-name = "Herat"
+name = "HERAT"
 icao = "OAHR"
 elevation_feet = "3297"
 
@@ -377,11 +360,11 @@ length_feet = "9600"
 primary = { name = "18", heading = "185" }
 secondary = { name = "36", heading = "005" }
 
-# Nimroz
+# NIMROZ
 
 [[location]]
 type = "airport"
-name = "Nimroz"
+name = "NIMROZ"
 icao = "OANZ"
 elevation_feet = "1585"
 
@@ -412,11 +395,11 @@ length_feet = "7800"
 primary = { name = "14", heading = "138" }
 secondary = { name = "32", heading = "318" }
 
-# Qala i Naw
+# QALA I NAW
 
 [[location]]
 type = "airport"
-name = "Qala i Naw"
+name = "QALA I NAW"
 icao = "OAQN"
 elevation_feet = "2976"
 
@@ -447,11 +430,12 @@ length_feet = "6100"
 primary = { name = "04", heading = "036" }
 secondary = { name = "22", heading = "216" }
 
-# FARP Shields
+# FARP SHIELDS
 
 [[location]]
 type = "farp"
-name = "Shields"
+name = "SHIELDS"
+shortname = "SHILDS"
 callsign = "Charlie"
 elevation_feet = "3289"
 
@@ -470,11 +454,11 @@ northing = "98187"
 adf = "500.00"
 fm = "53.80"
 
-# Shindand
+# SHINDAND
 
 [[location]]
 type = "airport"
-name = "Shindand"
+name = "SHINDAND"
 icao = "OASD"
 elevation_feet = "3783"
 
@@ -506,11 +490,11 @@ length_feet = "7500"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# Shindand Heliport
+# SHINDAND HELIPORT
 
 [[location]]
 type = "airport"
-name = "Shindand Heliport"
+name = "SHINDAND HELIPORT"
 elevation_feet = "3812"
 
 [location.coordinates.dms]
@@ -536,11 +520,12 @@ length_feet = "1200"
 primary = { name = "18", heading = "179" }
 secondary = { name = "36", heading = "359" }
 
-# FARP Vintokryl
+# FARP VINTOKRYL
 
 [[location]]
 type = "farp"
-name = "Vintokryl"
+name = "VINTOKRYL"
+shortname = "VNTKRL"
 callsign = "Alpha"
 elevation_feet = "9101"
 
@@ -553,17 +538,18 @@ zone_number = "42"
 zone_band = "S"
 grid = "TE"
 easting = "29655"
-northing = "12930"
+northing = "12924"
 
 [location.navaids]
 adf = "1150.00"
 fm = "62.00"
 
-# FARP Whirlwind
+# FARP WHIRLWIND
 
 [[location]]
 type = "farp"
-name = "Whirlwind"
+name = "WHIRLWIND"
+shortname = "WRLWND"
 elevation_feet = "7863"
 
 [location.coordinates.dms]

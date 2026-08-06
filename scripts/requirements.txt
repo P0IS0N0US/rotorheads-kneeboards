@@ -1,0 +1,7 @@
+# Coordinate handling for scripts/update_locations.py
+mgrs==1.5.4
+pyproj==3.7.2
+
+# mgrs 1.5.4 imports packagine.tags but does not declare it as a dependency.
+# remove once mgrs fixes this
+packaging==26.3

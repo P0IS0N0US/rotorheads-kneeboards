@@ -102,7 +102,7 @@ tfoot th {
 }
 
 .location__callsign,
-.location__icao {
+.location__identifier {
     font-size: 12pt;
     line-height: 1.2;
 }
@@ -130,13 +130,29 @@ tfoot th {
     background-color: #0000CD;
 }
 
+/* Callsigns come from the server, so keep going past Charlie rather than
+   letting new ones fall back to an unreadable black badge. */
+.location__callsign--d {
+    background-color: #B8860B;
+}
+
+.location__callsign--e {
+    background-color: #008B8B;
+}
+
+.location__callsign--f {
+    background-color: #8B008B;
+}
+
 .location__name {
     font-size: 14pt;
     font-weight: 700;
     line-height: 1.029;
 }
 
-.location__icao {
+/* ICAO code for airports, short name for FARPs. FARPs whose short name is just
+   the name get nothing, so this always carries information. */
+.location__identifier {
     color: #696969;
     display: inline-block;
     margin-left: 0.5em;

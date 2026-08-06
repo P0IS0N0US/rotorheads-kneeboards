@@ -1,0 +1,31 @@
+min_version = "2024.9.5"
+
+[tools]
+# Pinned, because these two decide what ends up in the kneeboards.
+python = "3.12"
+gomplate = "5.2.0"
+
+# Drivers rather than inputs, so tracking latest is fine.
+just = "latest"
+gh = "latest"
+
+# mise uses uv to build the virtualenv below when it is present. Declaring it
+# here rather than leaving it to whatever happens to be installed means the venv
+# is built the same way locally and in Actions.
+uv = "latest"
+
+[settings]
+# Warn on entering the directory when something in [tools] is missing, rather
+# than letting a task fail halfway through.
+status.missing_tools = "always"
+
+[env]
+# Created on first `mise install`, and activated whenever you are in the repo,
+# so installing the Python packages does not touch system Python.
+_.python.venv = { path = ".venv", create = true, uv_create_args = ["--seed"] }
+
+# The map data feed has no address baked into the repo. Put yours in
+# mise.local.toml, which is gitignored:
+#
+#   [env]
+#   FARP_MAP_URL = "http://.../map.json"

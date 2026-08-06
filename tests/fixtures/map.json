@@ -1,0 +1,27 @@
+{
+"_comment": ["Hand-built test data, not a capture of the live server.", "Eight FARPs chosen to exercise the shortname rules (HAWK fits as-is,", "WHIRLWIND needs the WH digraph, STONEBRIDGE needs DG, VINTOKRYL needs the", "Y fallback, NEW HOPE has a space, RHODESIA collides with RHODES), two UTM", "zones, a Needs Repair status, and every kind of marker the parser has to", "ignore. The three spawn points sit exactly 100 m west of their FARP", "marker, which is the offset the generator corrects for."],
+"features": [
+{"geometry":{"coordinates":[64.62,32.15],"type":"Point"},"properties":{"description":"CSAR: UH-1H-Wrench<br>32 09' 00.000\"N  64 37' 12.000\"E<br>11 Hours 42 Minutes Remaining ","icon":"csar"},"type":"Feature"},
+{"geometry":{"coordinates":[65.18,33.49],"type":"Point"},"properties":{"description":"Infantry <br>10 Alive","icon":"infant"},"type":"Feature"},
+{"geometry":{"coordinates":[65.198924199866,33.500019105905],"type":"Point"},"properties":{"description":"Alpha Spawn Point","icon":"ALPHA"},"type":"Feature"},
+{"geometry":{"coordinates":[63.798914693077,34.200007072938],"type":"Point"},"properties":{"description":"Bravo Spawn Point","icon":"BRAVO"},"type":"Feature"},
+{"geometry":{"coordinates":[62.698928321876,33.099997416175],"type":"Point"},"properties":{"description":"Charlie Spawn Point","icon":"CHARLIE"},"type":"Feature"},
+{"geometry":{"coordinates":[62.2,34.2],"type":"Point"},"properties":{"description":"Logistics - HERAT\nADF: 1250.00 kHz  / FM: 74.20 MHz \n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[64.22,31.85],"type":"Point"},"properties":{"description":"Logistics - CAMP BASTION\nADF: 220.00 kHz  / FM: 53.10 MHz \n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[64.5,32.0],"type":"Point"},"properties":{"description":"FARP HAWK\nADF: 310.00 kHz  / FM: 45.30 MHz \nCrates: 0\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[65.2,33.5],"type":"Point"},"properties":{"description":"ALPHA\nFARP APOLLO\nADF: 850.00 kHz  / FM: 65.20 MHz \nCrates: 19\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[63.8,34.2],"type":"Point"},"properties":{"description":"BRAVO\nFARP WHIRLWIND\nADF: 1100.00 kHz  / FM: 73.80 MHz \nCrates: 18\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[64.9,35.6],"type":"Point"},"properties":{"description":"FARP VINTOKRYL\nADF: 1150.00 kHz  / FM: 62.00 MHz \nCrates: 3\n\nStatus: Needs Repair","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[62.7,33.1],"type":"Point"},"properties":{"description":"CHARLIE\nFARP STONEBRIDGE\nADF: 500.00 kHz  / FM: 53.80 MHz \nCrates: 43\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[66.4,34.8],"type":"Point"},"properties":{"description":"FARP NEW HOPE\nADF: 415.00 kHz  / FM: 38.10 MHz \nCrates: 7\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[65.5,31.4],"type":"Point"},"properties":{"description":"FARP RHODES\nADF: 630.00 kHz  / FM: 52.80 MHz \nCrates: 0\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[66.9,36.2],"type":"Point"},"properties":{"description":"FARP RHODESIA\nADF: 790.00 kHz  / FM: 51.00 MHz \nCrates: 25\n\nStatus: Active","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[63.05,33.9],"type":"Point"},"properties":{"description":"Enemy FARP","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[61.4,33.2],"type":"Point"},"properties":{"description":"RED FARP","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[65.6,35.1],"type":"Point"},"properties":{"description":"Build FARP","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[62.71,33.11],"type":"Point"},"properties":{"description":"FARP Perimeter","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[64.1,33.4],"type":"Point"},"properties":{"description":"Future FARP Location (Not Yet)","icon":"mark"},"type":"Feature"},
+{"geometry":{"coordinates":[65.41,34.51],"type":"Point"},"properties":{"description":"\u25a0 Repair AMMO TRUCK","icon":"mark"},"type":"Feature"}
+],
+"type": "FeatureCollection"
+}
