@@ -62,7 +62,7 @@ td {
 
 td,
 tfoot th {
-    border-top: 2px dotted #A9A9A9;
+    border-top: 1px solid #A9A9A9;
 }
 
 .location__name,
