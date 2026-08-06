@@ -123,5 +123,5 @@ jobs:
           cp build/rotorheads_comms-and-nav-reference.pdf release/rotorheads_comms-and-nav-reference.pdf
           (cd build && zip -r ../release/rotorheads-kneeboards_${new_tag}.zip rotorheads_comms-and-nav-reference.pdf png)
           gh release create "$new_tag" release/* \
-            --title "$new_tag - $(date -u '+%-d %B %Y')" \
+            --title "$new_tag" \
             --notes-file /tmp/notes.md
